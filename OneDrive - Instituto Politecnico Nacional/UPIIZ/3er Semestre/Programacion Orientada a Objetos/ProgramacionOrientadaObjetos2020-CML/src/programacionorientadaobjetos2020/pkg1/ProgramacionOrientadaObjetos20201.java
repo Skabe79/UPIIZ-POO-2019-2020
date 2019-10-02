@@ -6,6 +6,7 @@
 package programacionorientadaobjetos2020.pkg1;
 
 import calcu_gato.Calculadora;
+import calcu_gato.CalculadoraMain;
 import calcu_gato.Gato;
 import gui.NewJFrame;
 import herencia2.Practicante;
@@ -64,8 +65,10 @@ public class ProgramacionOrientadaObjetos20201 {
         NewJFrame aux= new NewJFrame("Hola", 500, 500);*/
         /*Calculadora calP =new Calculadora();
         calP.menu();*/
-        Gato gato1=new Gato();
-        gato1.juego();
+        /*Gato gato1=new Gato();
+        gato1.juego();*/
+        CalculadoraMain h= new CalculadoraMain();
+        h.hola();
     }
     
 }
