@@ -6,6 +6,7 @@
 package calcu_gato;
 
 import java.awt.Color;
+import java.awt.Desktop.Action;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -22,7 +23,7 @@ public class JButtonCalculadora1 extends JButton{
         Font aux= getFont();
         String fuente=aux.getName();
         int estilo = aux.getStyle();
-        Font aux2= new Font(fuente,estilo, 10);
+        Font aux2= new Font(fuente,estilo, 40);
         setFont(aux2);
         setBackground(color);
     }

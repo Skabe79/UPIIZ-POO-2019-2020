@@ -28,23 +28,28 @@ public class JFrameCalcu extends JFrame{
         this.dim= dim;
     }
     public void inicializapanel(){
-        JPanel central= new JPanel(new GridLayout(4, 4));
-        JButtonCalculadora1 btnC = new JButtonCalculadora1("C", dim, Color.BLACK);
-        JButtonCalculadora1 btnCE = new JButtonCalculadora1("CE", dim, Color.BLACK);
-        JButtonCalculadora1 btnMM = new JButtonCalculadora1("+/-", dim, Color.BLACK);
-        JButtonCalculadora1 btnMulti = new JButtonCalculadora1("X", dim, Color.BLACK);
-        JButtonCalculadora1 btn7 = new JButtonCalculadora1("7", dim, Color.BLACK);
-        JButtonCalculadora1 btn8 = new JButtonCalculadora1("8", dim, Color.BLACK);
-        JButtonCalculadora1 btn9 = new JButtonCalculadora1("9", dim, Color.BLACK);
-        JButtonCalculadora1 btnDiv = new JButtonCalculadora1("/", dim, Color.BLACK);
-        JButtonCalculadora1 btn4 = new JButtonCalculadora1("4", dim, Color.BLACK);
-        JButtonCalculadora1 btn5 = new JButtonCalculadora1("5", dim, Color.BLACK);
-        JButtonCalculadora1 btn6 = new JButtonCalculadora1("6", dim, Color.BLACK);
-        JButtonCalculadora1 btnMenos = new JButtonCalculadora1("-", dim, Color.BLACK);
-        JButtonCalculadora1 btn1 = new JButtonCalculadora1("1", dim, Color.BLACK);
-        JButtonCalculadora1 btn2 = new JButtonCalculadora1("2", dim, Color.BLACK);
-        JButtonCalculadora1 btn3 = new JButtonCalculadora1("3", dim, Color.BLACK);
-        JButtonCalculadora1 btnMas = new JButtonCalculadora1("+", dim, Color.BLACK);
+        JPanel central= new JPanel(new GridLayout(5, 4));
+        JButtonCalculadora1 btnC = new JButtonCalculadora1("C", dim, Color.YELLOW);
+        JButtonCalculadora1 btnCE = new JButtonCalculadora1("CE", dim, Color.YELLOW);
+        JButtonCalculadora1 btnMM = new JButtonCalculadora1("+/-", dim, Color.YELLOW);
+        JButtonCalculadora1 btnMulti = new JButtonCalculadora1("X", dim, Color.BLUE);
+        JButtonCalculadora1 btn7 = new JButtonCalculadora1("7", dim, Color.GREEN);
+        JButtonCalculadora1 btn8 = new JButtonCalculadora1("8", dim, Color.GREEN);
+        JButtonCalculadora1 btn9 = new JButtonCalculadora1("9", dim, Color.GREEN);
+        JButtonCalculadora1 btnDiv = new JButtonCalculadora1("/", dim, Color.BLUE);
+        JButtonCalculadora1 btn4 = new JButtonCalculadora1("4", dim, Color.GREEN);
+        JButtonCalculadora1 btn5 = new JButtonCalculadora1("5", dim, Color.GREEN);
+        JButtonCalculadora1 btn6 = new JButtonCalculadora1("6", dim, Color.GREEN);
+        JButtonCalculadora1 btnMenos = new JButtonCalculadora1("-", dim, Color.BLUE);
+        JButtonCalculadora1 btn1 = new JButtonCalculadora1("1", dim, Color.GREEN);
+        JButtonCalculadora1 btn2 = new JButtonCalculadora1("2", dim, Color.GREEN);
+        JButtonCalculadora1 btn3 = new JButtonCalculadora1("3", dim, Color.GREEN);
+        JButtonCalculadora1 btnMas = new JButtonCalculadora1("+", dim, Color.BLUE);
+        JButtonCalculadora1 btncero = new JButtonCalculadora1("0", dim, Color.GREEN);
+        JButtonCalculadora1 btnpunto = new JButtonCalculadora1(".", dim, Color.YELLOW);
+        JButtonCalculadora1 btnisgual = new JButtonCalculadora1("=", dim, Color.BLUE);
+        JButtonCalculadora1 btnAcerca = new JButtonCalculadora1("?", dim, Color.BLUE);
+        
         setVisible(true);
         setSize(dim);
         setLayout(new BorderLayout());
@@ -64,13 +69,20 @@ public class JFrameCalcu extends JFrame{
         central.add(btn2);
         central.add(btn3);
         central.add(btnMas);
-        
+        central.add(btnpunto);
+        central.add(btncero);
+        central.add(btnisgual);
+        central.add(btnAcerca);
+        btn1.addActionListener(null);
         setLayout(new BorderLayout());
         add(central, BorderLayout.CENTER);
         JTextField display= new JTextField();
         Font auxFuente=display.getFont();
         Font nueva= new Font(auxFuente.getName(),auxFuente.getStyle(), 20);
         display.setFont(nueva);
-        
+        add(display, BorderLayout.NORTH);
+        display.setEditable(false);
+        display.setHorizontalAlignment(JTextField.RIGHT);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
